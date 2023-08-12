@@ -1,0 +1,82 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-container .slide {
+  flex: 1;
+}
+
+.carousel-container .slide-indicators {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel-container .slide-indicators div.slide-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer
+}
+.carousel-container .slide-indicators div.slide-indicator span.slide-indicator-dot {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.carousel-container .slide-indicators div.slide-indicator.slide-indicator-dark span.slide-indicator-dot {
+    background-color: #64748b;
+}
+.carousel-container .slide-indicators div.slide-indicator.is-active {
+    border-width: 2px;
+    border-color: #fff;
+}
+.carousel-container .slide-indicators div.slide-indicator.slide-indicator-dark.is-active {
+    border-width: 2px;
+    border-color: #64748b;
+}
+
+.carousel-container button.slide-button-prev {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 12px;
+    
+    height: 64px;
+    width: 64px;
+    color: #fff;
+    border-radius: 100%;
+}
+.carousel-container button.slide-button-prev.slide-button-dark, .carousel-container button.slide-button-next.slide-button-dark {
+    color: #64748b;
+}
+.carousel-container button.slide-button-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    
+    height: 64px;
+    width: 64px;
+    color: #fff;
+    border-radius: 100%;
+}
+.carousel-container button.slide-button-next svg,
+.carousel-container button.slide-button-prev svg {
+    height: 64px;
+    width: 64px;
+}
